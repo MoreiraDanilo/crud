@@ -27,21 +27,4 @@ class Estado_model extends CI_Model {
     public function select_all_estados() {
         return $this->db->get($this->tabela)->result();
     }
-
-    public function insert($estado) {
-        $this->db->insert($this->tabela, $estado);
-
-        return $this->db->insert();
-    }
-
-    public function update($estado) {
-        $this->db->where('id', $estado->id)
-                ->update($this->tabela, $estado);
-    }
-
-    public function delete($id) {
-        $this->db->where('id', $id)
-                ->delete($this->tabela);
-    }
-
 }

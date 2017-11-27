@@ -35,21 +35,4 @@ class Cidade_model extends CI_Model {
 
         return $this->db->get()->result();
     }
-
-    public function insert_cidade($cidade) {
-        $this->db->insert($this->tabela, $cidade);
-
-        return $this->db->insert();
-    }
-
-    public function update_update($cidade) {
-        $this->db->where('id', $cidade->id)
-                ->update($this->tabela, $cidade);
-    }
-
-    public function delete_cidade($id) {
-        $this->db->where('id', $id)
-                ->delete($this->tabela);
-    }
-
 }

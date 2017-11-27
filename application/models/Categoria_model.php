@@ -23,22 +23,4 @@ class Categoria_model extends CI_Model {
         public function select_all_categoria(){
             return $this->db->get($this->tabela)->result();
         }
-               
-        public function insert($estabelecimento){
-            $this->db->insert($this->tabela, $estabelecimento);
-            
-            return $this->db->insert();
-        }
-        
-        public function update($estabelecimento){
-            $this->db->where('id', $estabelecimento->id)
-                     ->update($this->tabela, $estabelecimento);
-        }
-        
-        public function delete($id){
-            //$id = (is_object($param)) ? $param->est_id : $param;
-            $this->db->where('id', $id)
-                     ->delete($this->tabela);
-        }
-        
 }
