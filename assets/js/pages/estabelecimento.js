@@ -154,16 +154,4 @@ $(document).ready(function () {
         }
         return true;
     },'Campo obrigatório para supermercado.');
-
-    $('.excluir').click(function (e) {
-
-        e.preventDefault();
-
-        $('#confirma').attr('href', $(this).attr('href'));
-
-        $('#Exclusao').modal('show');
-
-    });
-
-
 });
